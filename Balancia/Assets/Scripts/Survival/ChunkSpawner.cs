@@ -36,7 +36,7 @@ public class ChunkSpawner : MonoBehaviour
 
         Transform EndPos = lastChunk.EndPos;
 
-        newChunk.transform.position = EndPos.position;
+        newChunk.transform.position = newChunk.MidlePos.position - newChunk.StartPos.position + EndPos.position;
         newChunk.transform.localEulerAngles = EndPos.localEulerAngles;
         spawnedChunks.Add(newChunk);
     }
